@@ -75,10 +75,68 @@ const notas: number | string = 5
 function exibirNotas(nota: number| string) {
     console.log(`A sua nota e ${notas}`)
 }
-
 // atribuindo valores a função exibirNotas
 exibirNotas("10") // string
 exibirNotas(8) // number
+
+
+// Alias: deixa você criar atalhos para o seus tipos
+
+// criando um type para funcionarios, declarando um objeto o tipo da minha entidade
+type Funcionario = {
+    nome: string,
+    sobrenome: string,
+    idade: number,
+    dataNascimento: Date
+}
+
+// type Funcionarios = Array <Funcionario>
+
+// criando um array de funcionarios
+const funcionarios: Funcionario[] = [
+    {
+        nome: "Raphael",
+        sobrenome: "Anizio",
+        idade: 27,
+        dataNascimento: new Date
+    },
+    {
+        nome: "Doctor airton",
+        sobrenome: "Nobrega",
+        idade: 47,
+        dataNascimento: new Date
+    }
+]
+
+// função para trata funcionarios
+function tratarFuncionarios(funcionarios: Funcionario[]) {
+    for(let funcionario of funcionarios) {
+        console.log("Nome do funcionario: ", funcionario.nome)
+    }
+}
+
+// Valores nulos ou opcionais
+let altura: number | null = 1.61
+
+// criando um type para contato
+type Contato = {
+    nome: string,
+    telefone1: string,
+    
+    // O telefone2 eu vou querer que ele seja opcional, ele pode ser preenchido ou não
+    telefone2?: string
+    // Esse ponto de interrogação: ? vai dizer para o TypeScript que o campo do telefone2 ele é opcional   
+}
+
+// criando uma variavel contado que vai ser do tipo Contato
+const contato: Contato = {
+    nome: "Israel",
+    telefone1: "1133263625"
+}
+
+
+
+
 
 
 

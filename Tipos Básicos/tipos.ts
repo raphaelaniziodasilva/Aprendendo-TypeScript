@@ -134,9 +134,17 @@ const contato: Contato = {
     telefone1: "1133263625"
 }
 
+// Type Assertion: e quando você define explicitamente no codigo qual que é o tipo de determinada variavel
+/*
+const minhaIdade: any = 27
+<number>minhaIdade.toString() --> primeira forma
 
+(minhaIdade as number).toString() --> primeira forma
+*/
 
-
+// const input = <HTMLInputElement>document.getElementById("numero1") --> primeira forma
+const input = document.getElementById("numero1") as HTMLInputElement // segunda forma
+console.log(input.value)
 
 
 

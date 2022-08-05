@@ -55,5 +55,30 @@ criar({
 })
 // criar("raphael") // da erro
 
+// Never: o tipo never quase nunca vai ver ele sendi aplicado nos projetos
+function loopInfinito(): never {
+    while(true) {
+
+    }
+}
+
+function erro(mensagem: string): never {
+    throw Error(mensagem)
+}
+
+function falha() {
+    return erro("Algo falhou")
+}
+
+// Union types: quando algo pode ter um tipo ou outro ou seja pode ter mais de um tipo
+const notas: number | string = 5
+function exibirNotas(nota: number| string) {
+    console.log(`A sua nota e ${notas}`)
+}
+
+// atribuindo valores a função exibirNotas
+exibirNotas("10") // string
+exibirNotas(8) // number
+
 
 

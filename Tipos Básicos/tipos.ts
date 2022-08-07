@@ -17,8 +17,8 @@ const loterica: number[] = [10, 44, 08, 22, 11];
 const nomes: string[] = ["anderson", "nah", "diego"];
 
 // Tuple: vai ser um array aonde pode ter Number, String e Boolean
-let jogador = [string, number, boolean];
-jogador = ["Raphael", 7, true];
+// let jogador = [string, number, boolean];
+// jogador = ["Raphael", 7, true];
 
 // Enum: é muito utilizado para fazer um mapeamento de informações 
 enum StatusAprovacao {
